@@ -42,13 +42,13 @@ $result = $link->query('CALL `NyhetsLista`()');
 
                         <li id="list">
                             <form method="post">
-                                <input id="shoppingName" type="hidden" value="<?php print_r($row['name']); ?>" name="product_id">
-                                <input id="shoppingName" type="hidden" value="<?php print_r($row['price']); ?>" name="price">
+                                <input id="shoppingName" type="hidden" value="<?php print_r(utf8_encode($row['name'])); ?>" name="product_id">
+                                <input id="shoppingName" type="hidden" value="<?php print_r(utf8_encode($row['price'])); ?>" name="price">
                                 <input id="productButton" type="submit" value="Lägg till i kassa">
                             </form>
-                            <span class="name"><?php echo($row['name']); ?></span>
+                            <span class="name"><?php echo(utf8_encode($row['name'])); ?></span>
                             <br>
-                            <span class="price"><?php echo($row['price']); ?></span>
+                            <span class="price"><?php echo utf8_encode($row['price']); ?></span>
                         </li>
 
                     <?php } ?>

@@ -57,13 +57,13 @@ session_start();
                     while($row = mysqli_fetch_assoc($r)) { ?>
                         <li id="list">
                             <form method="post">
-                                <input id="shoppingName" type="hidden" value="<?php print_r($row['name']); ?>" name="product_id">
-                                <input id="shoppingName" type="hidden" value="<?php print_r($row['price']); ?>" name="price">
+                                <input id="shoppingName" type="hidden" value="<?php print_r(utf8_encode($row['name'])); ?>" name="product_id">
+                                <input id="shoppingName" type="hidden" value="<?php print_r(utf8_encode($row['price'])); ?>" name="price">
                                 <input id="productButton" type="submit" value="Lägg till i kundvagnen">
                             </form>
-                            <span class="name" ><?php print_r($row['name']); ?></span>
+                            <span class="name" ><?php print_r(utf8_encode($row['name'])); ?></span>
                             <br>
-                            <span class="price"><?php print_r($row['price']); ?></span>
+                            <span class="price"><?php print_r(utf8_encode($row['price'])); ?></span>
                         </li>
 
                     <?php
@@ -81,13 +81,13 @@ session_start();
                     while($row = mysqli_fetch_assoc($rew)) { ?>
                         <li id="list">
                             <form method="post">
-                                <input id="shoppingName" type="hidden" value="<?php print_r($row['name']); ?>" name="product_id">
-                                <input id="shoppingName" type="hidden" value="<?php print_r($row['price']); ?>" name="price">
+                                <input id="shoppingName" type="hidden" value="<?php print_r(utf8_encode($row['name'])); ?>" name="product_id">
+                                <input id="shoppingName" type="hidden" value="<?php print_r(utf8_encode($row['price'])); ?>" name="price">
                                 <input id="productButton" type="submit" value="Lägg till i kassa">
                             </form>
-                            <span class="name" ><?php print_r($row['name']); ?></span>
+                            <span class="name" ><?php print_r(utf8_encode($row['name'])); ?></span>
                             <br>
-                            <span class="price"><?php print_r($row['price']); ?></span>
+                            <span class="price"><?php print_r(utf8_encode($row['price'])); ?></span>
                         </li>
                     <?php
                     }
@@ -102,13 +102,13 @@ session_start();
                     while($row = mysqli_fetch_assoc($raw)) { ?>
                         <li id="list">
                             <form method="post">
-                                <input id="shoppingName" type="hidden" value="<?php print_r($row['name']); ?>" name="product_id">
-                                <input id="shoppingName" type="hidden" value="<?php print_r($row['price']); ?>" name="price">
+                                <input id="shoppingName" type="hidden" value="<?php print_r(utf8_encode($row['name'])); ?>" name="product_id">
+                                <input id="shoppingName" type="hidden" value="<?php print_r(utf8_encode($row['price'])); ?>" name="price">
                                 <input id="productButton" type="submit" value="Lägg till i kassa">
                             </form>
-                            <span class="name" ><?php print_r($row['name']); ?></span>
+                            <span class="name" ><?php print_r(utf8_encode($row['name'])); ?></span>
                             <br>
-                            <span class="price"><?php print_r($row['price']); ?></span>
+                            <span class="price"><?php print_r(utf8_encode($row['price'])); ?></span>
                             <br>
                             <div id="image"></div>
                         </li>
